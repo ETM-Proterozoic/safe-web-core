@@ -1,0 +1,10 @@
+.image {
+  width: 138px;
+  height: 94px;
+}
+
+.loading {
+  padding: 1px 12px;
+  border-radius: 4px;
+  background-color: #fff;
+}
