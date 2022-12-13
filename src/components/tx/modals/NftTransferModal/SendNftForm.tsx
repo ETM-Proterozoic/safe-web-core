@@ -96,10 +96,10 @@ const SendNftForm = ({ params, onSubmit }: SendNftFormProps) => {
 
   // Accumulate all loaded NFT pages in one array
   useEffect(() => {
-    if (nftData?.results?.length) {
-      setCombinedNfts((prev) => uniqBy(prev.concat(nftData.results), (item) => item.address + item.id))
+    if (nftData?.length) {
+      setCombinedNfts((prev) => uniqBy(prev.concat(nftData), (item) => item.address + item.id))
     }
-  }, [nftData?.results])
+  }, [nftData])
 
   return (
     <FormProvider {...formMethods}>
@@ -142,12 +142,12 @@ const SendNftForm = ({ params, onSubmit }: SendNftFormProps) => {
                     </MenuItem>
                   ))}
 
-                  {(nftLoading || nftData?.next) && (
+                  {(nftLoading || nftData) && (
                     <MenuItem disabled>
                       {nftLoading ? (
                         <CircularProgress size={20} />
                       ) : (
-                        nftData?.next && <InfiniteScroll onLoadMore={() => setPageUrl(nftData?.next)} />
+                        nftData && <InfiniteScroll onLoadMore={() => setPageUrl('')} />
                       )}
                     </MenuItem>
                   )}

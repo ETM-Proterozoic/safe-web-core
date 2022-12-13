@@ -67,6 +67,15 @@ export const createNewSafe = async (ethersProvider: Web3Provider, props: DeployS
       createCallAddress: '0xaBb87AF8d6BFB0353a94767fdEeF78FF551A8e85',
       signMessageLibAddress: '0x609d1E8a7544F946B0b2cBEb7Cf58B8F8256a7A0',
     },
+    ['48']: {
+      multiSendAddress: '0x5782b77C665e99Dc19F8d69A63E1697846d51b01',
+      safeMasterCopyAddress: '0x293557aAaBfeB45859366e42fc8AF80291425975',
+      safeProxyFactoryAddress: '0xAADFe7925b0Cad895665aDE74f5848043B8c4b7D',
+      multiSendCallOnlyAddress: '0x26B5A5F53709fC8A06c69d644ba8222A3847816d',
+      fallbackHandlerAddress: '0x0D2068Bbe4e3975adc8D6701234fBdA115CdAc19',
+      createCallAddress: '0x4B7F9AF5Abc9699831BF3C72210121bD70357f0B',
+      signMessageLibAddress: '0x3547de46e7D9e91FC93BbF7f16db71D1e5BD4f24',
+    },
   }
 
   const safeFactory = await SafeFactory.create({ ethAdapter, contractNetworks })
@@ -88,6 +97,15 @@ export const computeNewSafeAddress = async (ethersProvider: Web3Provider, props:
       fallbackHandlerAddress: '0xF616b36A97EFa7743007ab0D3a3398BB8Fb9f63a',
       createCallAddress: '0xaBb87AF8d6BFB0353a94767fdEeF78FF551A8e85',
       signMessageLibAddress: '0x609d1E8a7544F946B0b2cBEb7Cf58B8F8256a7A0',
+    },
+    ['48']: {
+      multiSendAddress: '0x5782b77C665e99Dc19F8d69A63E1697846d51b01',
+      safeMasterCopyAddress: '0x293557aAaBfeB45859366e42fc8AF80291425975',
+      safeProxyFactoryAddress: '0xAADFe7925b0Cad895665aDE74f5848043B8c4b7D',
+      multiSendCallOnlyAddress: '0x26B5A5F53709fC8A06c69d644ba8222A3847816d',
+      fallbackHandlerAddress: '0x0D2068Bbe4e3975adc8D6701234fBdA115CdAc19',
+      createCallAddress: '0x4B7F9AF5Abc9699831BF3C72210121bD70357f0B',
+      signMessageLibAddress: '0x3547de46e7D9e91FC93BbF7f16db71D1e5BD4f24',
     },
   }
 
