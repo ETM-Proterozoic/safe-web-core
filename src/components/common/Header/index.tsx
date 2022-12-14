@@ -12,6 +12,7 @@ import NotificationCenter from '@/components/notification-center/NotificationCen
 import { AppRoutes } from '@/config/routes'
 import useChainId from '@/hooks/useChainId'
 import SafeLogo from '@/public/images/logo.svg'
+import SafeText from '@/public/images/logo-title.svg'
 import Link from 'next/link'
 import useSafeAddress from '@/hooks/useSafeAddress'
 
@@ -37,9 +38,10 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
       </div>
 
       <div className={classnames(css.element, css.hideMobile, css.logo)}>
+        
         <Link href={logoHref} passHref>
           <a>
-            <SafeLogo alt="Safe logo" width={124} marginRight={20}/>
+            <SafeLogo alt="Safe logo" width={100} color='currentColor'/> 
           </a>
         </Link>
       </div>
